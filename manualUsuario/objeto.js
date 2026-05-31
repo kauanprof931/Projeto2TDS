@@ -4,7 +4,7 @@
 
 const pessoa = {
     nome: "João",
-    idade: 25
+    idade: 22
 };
 
 console.log("Objeto inicial:");
@@ -24,7 +24,7 @@ console.log("Nome (colchetes):", pessoa["nome"]);
 // 3. ALTERANDO ATRIBUTOS
 // =====================================
 
-pessoa.idade = 26;
+pessoa.idade = 23;
 
 console.log("\nApós alterar idade:");
 console.log(pessoa);
@@ -33,8 +33,8 @@ console.log(pessoa);
 // 4. ADICIONANDO NOVOS ATRIBUTOS
 // =====================================
 
-pessoa.profissao = "Programador";
-pessoa.cidade = "São Paulo";
+pessoa.profissao = "Desenvolvedor";
+pessoa.cidade = "Umuarama";
 
 console.log("\nApós adicionar novos atributos:");
 console.log(pessoa);
@@ -45,7 +45,7 @@ console.log(pessoa);
 
 pessoa.endereco = {
     rua: "Rua das Flores",
-    numero: 123,
+    numero: 1234,
     bairro: "Centro"
 };
 
@@ -59,7 +59,7 @@ console.log("\nRua:", pessoa.endereco.rua);
 // 6. ADICIONANDO MAIS ATRIBUTOS DENTRO DO OBJETO INTERNO
 // =====================================
 
-pessoa.endereco.estado = "SP";
+pessoa.endereco.estado = "PR";
 pessoa.endereco.pais = "Brasil";
 
 console.log("\nEndereço atualizado:");
@@ -70,7 +70,7 @@ console.log(pessoa.endereco);
 // =====================================
 
 pessoa.hobbies = [
-    "Futebol",
+    "Basquete",
     "Música",
     "Programação"
 ];
@@ -82,10 +82,10 @@ console.log(pessoa.hobbies);
 // 8. MANIPULANDO O ARRAY
 // =====================================
 
-// Adicionar item
+// Adicionar um novo hobby
 pessoa.hobbies.push("Academia");
 
-// Remover último item
+// Remover último hobby
 // pessoa.hobbies.pop();
 
 console.log("\nHobbies atualizados:");
@@ -115,31 +115,22 @@ console.log(pessoa.configuracoes);
 // 10. ARRAY DE OBJETOS
 // =====================================
 
-pessoa.contatos = [
-    {
-        nome: "Maria",
-        telefone: "1111-1111"
-    },
-    {
-        nome: "Pedro",
-        telefone: "2222-2222"
-    }
-];
+pessoa.contatos = {
+    email: ["joao@email.com", "joao@outroemail.com"],
+    telefone: ["1234-5678", "9876-5432"]
+}
 
 console.log("\nContatos:");
 console.log(pessoa.contatos);
 
 // Acessando contato específico
 console.log("\nPrimeiro contato:");
-console.log(pessoa.contatos[0].nome);
+console.log(pessoa.contatos.email[0]);
 
-// Adicionando novo contato
-pessoa.contatos.push({
-    nome: "Ana",
-    telefone: "3333-3333"
-});
+// Adicionando novo email
+pessoa.contatos.email.push("joao@novemail.com");
 
-console.log("\nContatos após adicionar Ana:");
+console.log("\nContatos após adicionar novo email:");
 console.log(pessoa.contatos);
 
 // =====================================
