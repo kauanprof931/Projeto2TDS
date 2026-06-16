@@ -12,7 +12,8 @@
 //     }
 // }
 // const conta = new ContaBancaria();
-// console.log(conta.#saldo);
+// conta.depositar(100);
+// console.log(conta.saldo);
 // // // Erro: Atributo privado não pode ser acessado diretamente
 
 
@@ -26,10 +27,13 @@
 //         this.#nome = nome;
 //     }
 
-//     get nome() {
+//     get aluno() {
 //         return this.#nome;
 //     }
 // }
+
+// const usuario = new Usuario("João");
+// console.log(usuario.aluno); // Acessa o nome usando o getter
 
 // const usuario = new Usuario("João");
 // console.log(usuario.nome); // Acessa o nome usando o getter
@@ -58,15 +62,15 @@
 // Quarta exemplo da Aula
 // ========================================
 
-class Login {
-    #senha; // Atributo privado
-    constructor(user, pass) {
-        this.usuario = user;
-        this.#senha = pass;
-    }
-    autenticar(tentativa) {
-        return tentativa === this.#senha;
-    }
-}
-const conta = new Login("admin", "1234");
-console.log(conta.autenticar("1234")); // true
+// class Login {
+//     #senha; // Atributo privado
+//     constructor(user, pass) {
+//         this.usuario = user;
+//         this.#senha = pass;
+//     }
+//     autenticar(tentativa) {
+//         return tentativa === this.#senha;
+//     }
+// }
+// const conta = new Login("admin", "1234");
+// console.log(conta.autenticar("1234")); // true
